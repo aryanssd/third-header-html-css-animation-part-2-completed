@@ -20,6 +20,7 @@ body{
     position: absolute;
     top: 15%;
     left: 15%;
+    animation: left 1.5s ease-out;
 }
 
 .text{
@@ -32,6 +33,8 @@ body{
 .big-text{
     color:rgba(172, 172, 172, 0.8);
     font-size: 220px;
+    animation: right 1.5s ease-out;
+
 }
 
 .colored-text{
@@ -81,6 +84,7 @@ body{
     bottom: 90px;
     display: flex;
     flex-direction: column;
+    animation: right 1s ease-in;
 }
 
 .media-link{
@@ -91,4 +95,34 @@ body{
     font-size: 18px;
     margin-left: 5px;
     letter-spacing: 1px;
+}
+
+@keyframes right{
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    90% {
+        transform: translateX(+10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+@keyframes left{
+    0% {
+        opacity: 1;
+        transform: translateX(+150px);
+    }
+    90% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
